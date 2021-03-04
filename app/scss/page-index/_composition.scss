@@ -1,0 +1,41 @@
+.composition {
+  padding: 70px 0;
+
+  &__inner {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__ingr {
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__pic {
+    margin-bottom: 10px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+
+    &--sugar {
+      background-image: url(../img/ingr-sugar.jpg);
+    }
+
+    &--oduv {
+      background-image: url(../img/ingr-oduv.jpg);
+    }
+  }
+
+  &__text {
+    display: block;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  &__img {
+  }
+}

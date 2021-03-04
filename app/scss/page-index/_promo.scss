@@ -1,33 +1,55 @@
 .promo {
+  position: relative;
   padding: 70px 0;
+
+  &__video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  &__title {
+    padding: 15px 0 15px 8%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 
   &__inner {
     justify-content: space-between;
   }
 
+  &__img {
+    margin: 0 5%;
+  }
+
   &__descr {
     padding: 40px 20px 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   &__list {
     list-style: none;
+    margin-bottom: 35px;
   }
 
   &__item {
     position: relative;
     margin-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 25px;
 
     &::before {
       background-image: url(../img/check.png);
+      background-size: cover;
       content: "";
       position: absolute;
       left: 0;
-      top: 4px;
-      width: 13px;
-      height: 13px;
-      background-color: $yellow;
-      // border-radius: 50%;
+      top: 5px;
+      width: 18px;
+      height: 18px;
     }
   }
 }
