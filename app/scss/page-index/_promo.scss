@@ -1,0 +1,33 @@
+.promo {
+  padding: 70px 0;
+
+  &__inner {
+    justify-content: space-between;
+  }
+
+  &__descr {
+    padding: 40px 20px 20px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+
+    &::before {
+      background-image: url(../img/check.png);
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 13px;
+      height: 13px;
+      background-color: $yellow;
+      // border-radius: 50%;
+    }
+  }
+}

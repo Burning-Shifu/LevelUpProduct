@@ -1,0 +1,25 @@
+.menu {
+  
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  &__link {
+    color: inherit;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  
+    &:focus {
+      outline: 1px solid $yellow;
+      outline-offset: 7px;
+    }
+  }
+
+}

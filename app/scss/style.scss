@@ -2,7 +2,7 @@
 @import "_vars";
 @import "_global";
 
-@import "components/header";
-@import "components/footer";
-
-@import "_page-index";
+@import "page-index/_header";
+@import "page-index/_menu";
+@import "page-index/_promo";
+@import "page-index/_footer";
