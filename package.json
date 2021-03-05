@@ -20,7 +20,9 @@
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^6.4.15"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Burning-Shifu/LevelUpProduct.git"

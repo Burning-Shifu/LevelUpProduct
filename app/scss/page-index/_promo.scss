@@ -1,6 +1,7 @@
 .promo {
   position: relative;
   padding: 70px 0;
+  overflow: hidden;
 
   &__video {
     position: absolute;
@@ -8,7 +9,8 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: -1;
+    object-fit: cover;
+    z-index: -100;
   }
 
   &__title {
