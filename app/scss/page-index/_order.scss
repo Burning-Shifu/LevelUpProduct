@@ -32,6 +32,7 @@
 
   &__block {
     align-items: center;
+    justify-content: center;
 
     @include tablet-down {
       flex-direction: column;
@@ -116,7 +117,7 @@
   }
 
   &__prices {
-    text-align: center;
+    justify-content: center;
   }
   
   &__old-price {
@@ -132,6 +133,7 @@
     font-size: 30px;
     font-weight: 700;
     color: #d90202;
+    animation: rotate 2s linear infinite alternate;
 
     &::after {
       content: "";
@@ -146,6 +148,11 @@
 
     @include phone-down {
       margin-right: 0;
+    }
+
+    @keyframes rotate { 
+      from {transform: rotate(8deg);}
+      to {transform: rotate(-8deg);}
     }
   }
   

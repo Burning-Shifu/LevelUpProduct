@@ -3,6 +3,14 @@
   padding: var(--padding);
   overflow: hidden;
 
+  @include phone-down {
+    background-image: url(../img/poster.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+
   &__video {
     position: absolute;
     right: 0;
@@ -11,6 +19,10 @@
     min-height: 100%;
     object-fit: cover;
     z-index: -100;
+
+    @include phone-down {
+      display: none;
+    }
   }
 
   &__title {
