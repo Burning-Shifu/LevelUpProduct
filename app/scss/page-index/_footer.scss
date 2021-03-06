@@ -16,6 +16,16 @@
   }
 
   &__tel {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 1px solid $yellow;
+      outline-offset: 7px;
+    }
     
     @include tablet-down {
       display: block;

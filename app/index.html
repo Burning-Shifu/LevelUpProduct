@@ -21,16 +21,16 @@
           <nav class="menu">
             <ul class="menu__list indent-0">
               <li class="menu__item">
-                <a class="menu__link" href="#">Ingredients</a>
+                <a class="menu__link" href="#ingr">Ingredients</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">Reviews</a>
+                <a class="menu__link" href="#reviews">Reviews</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">Summary</a>
+                <a class="menu__link" href="#summary">Summary</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">Order</a>
+                <a class="menu__link" href="#form">Order</a>
               </li>
             </ul>
           </nav>
@@ -70,7 +70,7 @@
       </div>
     </section>
 
-    <section class="composition">
+    <section class="composition" id="ingr">
       <div class="container">
         <h2 class="title">Ingredients</h2>
         <div class="composition__inner d-flex">
@@ -109,11 +109,11 @@
           </div>
         </div>
 
-        <a href="#form" class="btn btn--m0a">Заказать</a>
+        <a href="#form" class="btn">Заказать</a>
       </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="container">
         <h2 class="title">Reviews</h2>
         <div class="reviews__inner">
@@ -177,7 +177,7 @@
       </div>
     </section>
 
-    <section class="promo summary">
+    <section class="promo summary" id="summary">
 
       <div class="container">
         <h2 class="title">Summary</h2>
@@ -202,7 +202,7 @@
       </div>
     </section>
 
-    <section class="order">
+    <section class="order" id="form">
       <div class="container">
         <h2 class="title">LevelUp</h2>
 
@@ -224,11 +224,13 @@
               <label for="order-name" class="order__label">Ваше имя:</label>
               <div class="order__input-wrapper" id="name">
                 <input class="order__input" type="text" name="name" id="order-name" placeholder="ФИО" required>
+                <span class="order__input-tip">Иванов Иван Иванович</span>
               </div>
 
               <label for="order-tel" class="order__label">Ваш телефон:</label>
               <div class="order__input-wrapper" id="tel">
                 <input class="order__input" type="tel" name="tel" id="order-tel" placeholder="Номер телефона" pattern="[0-9]+" required>
+                <span class="order__input-tip">+8 800 000 00 00</span>
               </div>
 
               <button class="btn order__btn" type="submit">Заказать</button>

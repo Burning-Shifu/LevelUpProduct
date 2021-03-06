@@ -1,21 +1,39 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  // menu
+
+  const menuBtn = document.querySelector('.header__menu-btn'),
+        menu = document.querySelector('.menu'),
+        menuLink = document.querySelectorAll('.menu__link');
+
+  menuBtn.addEventListener('click', () => {
+    if (menu.classList.contains('open')) {
+      menu.classList.remove('open');
+      menuBtn.classList.remove('open');
+    } else {
+      menu.classList.add('open');
+      menuBtn.classList.add('open');
+    }
+  });
+
+  menuLink.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        menuBtn.classList.remove('open');
+      }
+    });
+  });
+
+  // swiper
+
   let swiper = new Swiper('.reviews__slider', {
     navigation: {
       nextEl: '.reviews__arrow--next',
       prevEl: '.reviews__arrow--prev',
     },
-  });
-
-  // menu
-
-  const menuBtn = document.querySelector('.header__menu-btn'),
-        menu = document.querySelector('.menu');
-
-  menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('open');
-    menuBtn.classList.toggle('open');
   });
 
   // timer
@@ -61,5 +79,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  setTimeRemaining(); 
+  setTimeRemaining();   
 });
