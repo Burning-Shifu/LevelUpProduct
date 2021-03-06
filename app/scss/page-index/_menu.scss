@@ -1,25 +1,68 @@
 .menu {
+  transition: transform 0.5s ease;
+
+  @include phone-down {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  &.open {
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+    transform: scale(1);
+  }
   
   &__list {
     list-style: none;
+
+    @include phone-down {
+      padding-top: 110px;
+      color: #fff;
+      background-color: $text;
+      height: 100%;
+    }
   }
 
   &__item {
     display: inline-block;
     margin-left: 15px;
+
+    @include phone-down {
+      display: block;
+      padding: 15px 10px;
+      font-size: 25px;
+    }
   }
   
   &__link {
+    position: relative;
     color: inherit;
     
     &:hover {
-      text-decoration: underline;
+      &::after {
+        right: 0;
+      }
     }
   
     &:focus {
       outline: 1px solid $yellow;
       outline-offset: 7px;
     }
-  }
 
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 200px;
+      height: 2px;
+      background-color: #000;
+      transition: right 0.5s;
+    }
+  }
 }

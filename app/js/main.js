@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  // menu
+
+  const menuBtn = document.querySelector('.header__menu-btn'),
+        menu = document.querySelector('.menu');
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    menuBtn.classList.toggle('open');
+  });
 
   // timer
   

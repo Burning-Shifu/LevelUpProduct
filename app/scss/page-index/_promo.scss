@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  padding: 70px 0;
+  padding: var(--padding);
   overflow: hidden;
 
   &__video {
@@ -21,16 +21,31 @@
 
   &__inner {
     justify-content: space-between;
+
+    @include tablet-down  {
+      flex-direction: column;
+    }
   }
 
   &__img {
     margin: 0 5%;
+    max-width: 250px;
+    object-fit: cover;
+
+    @include tablet-down  {
+      margin: 0 auto 3%;
+    }
   }
 
   &__descr {
     padding: 40px 20px 20px;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.6);
+
+    @include phone-down  {
+      padding-top: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
   }
 
   &__list {

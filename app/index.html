@@ -89,7 +89,9 @@
             </div>
           </div>
 
-          <img class="composition__img" src="img/prod.png" alt="Банка LevelUp">
+          <div class="composition__img-wrapper">
+            <img class="composition__img" src="img/prod.png" alt="Банка LevelUp">
+          </div>
 
           <div class="composition__ingr">
             <div class="composition__item">
@@ -121,12 +123,14 @@
               <div class="swiper-slide">
                 <img src="../img/man.png" alt="Фотография пользователя" class="reviews__photo">
                 <p class="reviews__author">Username</p>
-                <p class="reviews__text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam enim deleniti tempore quasi esse consectetur vitae veritatis soluta assumenda vero, officiis iusto expedita magnam totam eveniet molestias dolore rem architecto.
-                </p>
-                <p class="reviews__text">
-                  Sapiente labore, corporis aut adipisci voluptatibus quam voluptatem facilis vero aliquam rerum voluptatum quasi minus atque, accusamus distinctio beatae nam tempore dolorum commodi modi neque fugiat sit laudantium. Explicabo, ipsum?
-                </p>
+                <div class="reviews__text">
+                  <p>
+                    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam enim deleniti tempore quasi esse consectetur vitae veritatis soluta assumenda vero, officiis iusto expedita magnam totam eveniet molestias dolore rem architecto.
+                  </p>
+                  <p>
+                    Sapiente labore, corporis aut adipisci voluptatibus quam voluptatem facilis vero aliquam rerum voluptatum quasi minus atque, accusamus distinctio beatae nam tempore dolorum commodi modi neque fugiat sit laudantium. Explicabo, ipsum?"
+                  </p>
+                </div>
               </div>
 
               <div class="swiper-slide">
@@ -179,10 +183,10 @@
         <h2 class="title">Summary</h2>
         
         <div class="promo__inner d-flex">
-          <img class="promo__img" src="img/doctor.png" alt="Доктор держит в руках препарат">
+          <img class="promo__img summary__img" src="img/doctor.png" alt="Доктор держит в руках препарат">
           
-          <div class="summary__descr summary__descr--deco">
-              <p class="summary__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam recusandae delectus ipsum nihil? Molestias blanditiis optio sit nihil repellat voluptatibus eligendi dolorum ab odio temporibus. Veritatis excepturi aut accusantium at. Quisquam aut accusantium nostrum minus dignissimos libero a, doloremque tempore voluptas, odit animi? Libero, et temporibus? Tempora perferendis laborum perspiciatis dolorum officiis cum magnam, natus, rerum voluptatibus quasi ea? Modi!</p>
+          <div class="summary__descr">
+            <p class="summary__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam recusandae delectus ipsum nihil? Molestias blanditiis optio sit nihil repellat voluptatibus eligendi dolorum ab odio temporibus. Veritatis excepturi aut accusantium at. Quisquam aut accusantium nostrum minus dignissimos libero a, doloremque tempore voluptas, odit animi? Libero, et temporibus? Tempora perferendis laborum perspiciatis dolorum officiis cum magnam, natus, rerum voluptatibus quasi ea? Modi!</p>
             <a href="#form" class="btn">Заказать</a>
           </div>
         </div>
@@ -217,14 +221,16 @@
 
           <div class="order__info">
             <form action="" method="POST" class="order__form">
-              <label class="order__label">
-                Ваше имя:
-                <input class="order__input" type="text" name="order-name" placeholder="ФИО" required>
-              </label>
-              <label class="order__label">
-                Ваш телефон:
-                <input class="order__input" type="tel" name="order-tel" placeholder="Номер телефона" pattern="[0-9]+" required>
-              </label>
+              <label for="order-name" class="order__label">Ваше имя:</label>
+              <div class="order__input-wrapper" id="name">
+                <input class="order__input" type="text" name="name" id="order-name" placeholder="ФИО" required>
+              </div>
+
+              <label for="order-tel" class="order__label">Ваш телефон:</label>
+              <div class="order__input-wrapper" id="tel">
+                <input class="order__input" type="tel" name="tel" id="order-tel" placeholder="Номер телефона" pattern="[0-9]+" required>
+              </div>
+
               <button class="btn order__btn" type="submit">Заказать</button>
             </form>
 
@@ -257,15 +263,13 @@
         </a>
 
         <address class="footer__address">
-          Questions? Contact Us! <a href="tel:+88005555555">+8 800 555 55 55</a>
+          Questions? Contact Us! 
+          <a class="footer__tel" href="tel:+88005555555">+8 800 555 55 55</a>
         </address>
       </div>
     </div>
   </footer>
 
-
-
- 
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 

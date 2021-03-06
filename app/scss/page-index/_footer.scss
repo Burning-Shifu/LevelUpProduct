@@ -9,5 +9,16 @@
 
   &__address {
     font-style: normal;
+
+    @include tablet-down {
+      text-align: center;
+    }
+  }
+
+  &__tel {
+    
+    @include tablet-down {
+      display: block;
+    }
   }
 }

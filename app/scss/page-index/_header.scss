@@ -1,5 +1,6 @@
 .header {
-  padding: 20px 0;
+  padding: 20px 0 15px;
+  border-bottom: 1px solid rgba($text, 0.4);
 
   &__inner {
     justify-content: space-between;
@@ -8,6 +9,69 @@
 
 
   &__menu-btn {
+    position: relative;
     display: none;
+    padding: 0;
+    width: 35px;
+    height: 17px;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+
+    @include phone-down {
+      display: block;
+      z-index: 3;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $yellow;
+      border-radius: 3px;
+      transition: transform 0.3s ease;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &:focus {
+      outline: 1px solid $yellow;
+      outline-offset: 10px;
+    }
+
+    &.open {
+
+      &::before {
+        transform: rotate(45deg);
+        top: 7px;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        bottom: 7px;
+      }
+
+      .header__menu-row {
+        transform: scale(0);
+      }
+    }
   }
+
+  &__menu-row {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $yellow;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+  } 
 }
