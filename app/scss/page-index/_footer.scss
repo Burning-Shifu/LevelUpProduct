@@ -1,0 +1,13 @@
+.footer {
+  padding: 30px 0 20px;
+  border-top: 1px solid rgba($text, 0.4);
+
+  &__inner {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+}

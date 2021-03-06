@@ -28,43 +28,9 @@
   }
 
   &__descr {
-    position: relative;
     padding: 40px 20px 20px;
-    height: fit-content;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 30px;
-      height: 30px;
-    }
-
-    &::before {  
-      top: 0;
-      left: -15px;
-      border-left: 5px solid $yellow;
-      border-top: 5px solid $yellow;
-    }
-
-    &::after {
-      bottom: -30px;
-      right: -15px;
-      border-right: 5px solid $yellow;
-      border-bottom: 5px solid $yellow;
-    }
-    
-    &--inverse {
-      color: #fff;
-      background-color: rgba(0, 0, 0, 0.6);
-      height: auto;
-
-      &::before,
-      &::after {
-        display: none;
-      }
-    }
-
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   &__list {
@@ -78,7 +44,7 @@
     padding-left: 25px;
 
     &::before {
-      background-image: url(../img/check.png);
+      background-image: url(../img/check-white.svg);
       background-size: cover;
       content: "";
       position: absolute;

@@ -21,16 +21,16 @@
           <nav class="menu">
             <ul class="menu__list indent-0">
               <li class="menu__item">
-                <a class="menu__link" href="#">1</a>
+                <a class="menu__link" href="#">Ingredients</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">2</a>
+                <a class="menu__link" href="#">Reviews</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">3</a>
+                <a class="menu__link" href="#">Summary</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">4</a>
+                <a class="menu__link" href="#">Order</a>
               </li>
             </ul>
           </nav>
@@ -173,20 +173,76 @@
       </div>
     </section>
 
-    <section class="promo">
+    <section class="promo summary">
 
       <div class="container">
-        <h1 class="title">Summary</h1>
+        <h2 class="title">Summary</h2>
         
         <div class="promo__inner d-flex">
           <img class="promo__img" src="img/doctor.png" alt="Доктор держит в руках препарат">
           
-          <div class="promo__descr">
-              <p class="promo__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam recusandae delectus ipsum nihil? Molestias blanditiis optio sit nihil repellat voluptatibus eligendi dolorum ab odio temporibus. Veritatis excepturi aut accusantium at. Quisquam aut accusantium nostrum minus dignissimos libero a, doloremque tempore voluptas, odit animi? Libero, et temporibus? Tempora perferendis laborum perspiciatis dolorum officiis cum magnam, natus, rerum voluptatibus quasi ea? Modi!</p>
+          <div class="summary__descr summary__descr--deco">
+              <p class="summary__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam recusandae delectus ipsum nihil? Molestias blanditiis optio sit nihil repellat voluptatibus eligendi dolorum ab odio temporibus. Veritatis excepturi aut accusantium at. Quisquam aut accusantium nostrum minus dignissimos libero a, doloremque tempore voluptas, odit animi? Libero, et temporibus? Tempora perferendis laborum perspiciatis dolorum officiis cum magnam, natus, rerum voluptatibus quasi ea? Modi!</p>
             <a href="#form" class="btn">Заказать</a>
           </div>
         </div>
+        <div class="summary__pros">
+          <ul class="promo__list summary__list indent-0">
+            <li class="promo__item summary__item">Dolor sit amet.</li>
+            <li class="promo__item summary__item">Consectetur adipisicing elit.</li>
+            <li class="promo__item summary__item">Dignissimos est rem aperiam.</li>
+          </ul>
+        </div>
         
+        
+      </div>
+    </section>
+
+    <section class="order">
+      <div class="container">
+        <h2 class="title">LevelUp</h2>
+
+        <div class="order__timer">
+          <div class="order__timer-block">
+            <span id="minutes" class="order__timer-num">00</span>
+              минут
+          </div>
+          <div class="order__timer-block">
+            <span id="seconds" class="order__timer-num">00</span>
+              секунд
+          </div>
+        </div>
+
+        <div class="order__block d-flex">
+
+          <div class="order__info">
+            <form action="" method="POST" class="order__form">
+              <label class="order__label">
+                Ваше имя:
+                <input class="order__input" type="text" name="order-name" placeholder="ФИО" required>
+              </label>
+              <label class="order__label">
+                Ваш телефон:
+                <input class="order__input" type="tel" name="order-tel" placeholder="Номер телефона" pattern="[0-9]+" required>
+              </label>
+              <button class="btn order__btn" type="submit">Заказать</button>
+            </form>
+
+            <div class="order__prices">
+              <span class="order__old-price">
+                3300
+                <span class="order__rub">руб.</span>
+              </span>
+              <span class="order__new-price">
+                2800
+                <span class="order__rub">руб.</span>
+              </span>
+            </div>
+          </div>
+
+          <img class="order__img" src="img/prod.png" alt="Банка LevelUp">
+        </div>
+
       </div>
     </section>
 
@@ -194,7 +250,16 @@
 
   <footer class="footer">
     <div class="container">
+      <div class="footer__inner d-flex">
 
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="img/logo.png" alt="Логотип сайта">
+        </a>
+
+        <address class="footer__address">
+          Questions? Contact Us! <a href="tel:+88005555555">+8 800 555 55 55</a>
+        </address>
+      </div>
     </div>
   </footer>
 
